@@ -1,3 +1,7 @@
+## Date : Feb 7th 2016 , Aithor : Neha Tyagi 
+## Accounts used for commits neha.tyagi110@gmail.com and ntyagi@mdsol.com
+
+
 ## The functions in this file are used to calculate matrix inversion which is a costly computation.
 
 ## makeCacheMatrix function is used to create a special matrix object 
@@ -23,7 +27,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## It will retrieve its inverse from the cache.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+    ## Return a matrix that is the inverse of 'x'
     inv = x$getinv()
     if (!is.null(inv))
     {
@@ -40,12 +44,10 @@ cacheSolve <- function(x, ...) {
 
 ## To test these methods , create a matrix and call these functions as below:
 ## extra steps for testing:
-## craete matrix of random numbers and then calling these functions.
+## create matrix of random numbers and then calling these functions.
 set.seed(1110201)
 r = rnorm(1000000)
 mat1 = matrix(r, nrow=1000, ncol=1000)
 test = makeCacheMatrix(mat1)
 cacheSolve(test)
-
-
 
