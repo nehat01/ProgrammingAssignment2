@@ -39,9 +39,13 @@ cacheSolve <- function(x, ...) {
 }
 
 ## To test these methods , create a matrix and call these functions as below:
-
+## extra steps for testing:
+## craete matrix of random numbers and then calling these functions.
 set.seed(1110201)
 r = rnorm(1000000)
 mat1 = matrix(r, nrow=1000, ncol=1000)
 test = makeCacheMatrix(mat1)
 cacheSolve(test)
+
+
+
